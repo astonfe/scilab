@@ -22,6 +22,6 @@ for i=1:length(xlab)
     t.text_box_mode="centered";
 end
 xtitle("Acetylsalicylic acid","Mass-to-charge ratio","Relative intensity (%)");
-g="\includegraphics[scale=0.05]{C:\Users\Stefano\Docs\Projects\Scilab\spectra\aspirin_structure.png}";
+g="\includegraphics[scale=0.05]{/home/astonfe/aspirin_structure.png}";
 xstring(5,65,"$"+g+"$")
 xs2eps(0,'impulse_plot.eps');
