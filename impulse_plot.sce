@@ -6,7 +6,7 @@ sheets=readxls(uigetfile("*.xls"));
 data=sheets(1).value;
 xspe=data(:,1); // Full spectrum
 yspe=data(:,2);
-xlab=data(:,3); // Fragments labelled
+xlab=data(:,3); // Fragments labels
 ylab=data(:,4);
 absc=zeros(length(xspe),1);
 x=cat(2,xspe,xspe);
@@ -15,7 +15,7 @@ y=cat(2,yspe,absc);
 for i=1:length(xspe)
     plot2d(x(i,:),y(i,:),2,rect=[0,0,max(xspe)+10,105]);
 end
-// Fragments labelled
+// Fragments labels
 for i=1:length(xlab)
     xstring(xlab(i),ylab(i)+2,string(xlab(i)));
     t=get("hdl");
