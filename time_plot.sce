@@ -10,6 +10,7 @@ d=data(:,3);
 p=data(:,4);
 t=datenum(y,m,d);
 xx=linspace(min(t),max(t),1000)';
+n=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]';
 // not_a_knot, clamped, natural, periodic, monotone, fast, fast_periodic
 df=splin(t,p,"fast");
 [yyf,yy1f,yy2f]=interp(xx,t,p,df);
@@ -18,7 +19,7 @@ s=gca();
 s.children.children.mark_background=12;
 locs=s.x_ticks.locations;
 time=datevec(locs);
-labs=string(time(:,1))+"-"+string(time(:,2))+"-"+string(time(:,3));
+labs=string(time(:,3))+"-"+n(time(:,2))+"-"+string(time(:,1));
 s.x_ticks=tlist(["ticks","locations","labels"],locs,labs);
 xgrid(color(192,192,192),1,8);
 xtitle("Diesel fuel","","Price (€/L)");
