@@ -18,21 +18,15 @@ t.polyline_style=1;
 t.foreground=-1;
 t.background=color(220,220,220);
 labx=["-2","-1.5","x_1=-1","-0.5","0","0.5","x_2=1","1.5","2"];
-laby=0:0.1:1;
-[xr,xc]=size(labx);
-[yr,yc]=size(laby);
+laby=string(0:0.1:1);
 s=gca();
 s.box="off";
 s.margins(3)=0.2;
 s.margins(4)=0.2;
 s.data_bounds=[-2,0;2,1.05];
 s.tight_limits="on";
-for i=1:xc
-    s.x_ticks.labels(i)="$\Large\rotatebox{90}\mathrm{"+labx(i)+"}$";
-end
-for i=1:yc
-    s.y_ticks.labels(i)="$\Large\mathrm{"+string(laby(i))+"}$";
-end
+s.x_ticks.labels="$\Large\rotatebox{90}\mathrm{"+labx+"}$";
+s.y_ticks.labels="$\Large\mathrm{"+laby+"}$";
 xstring(-0.9,0.3,"$\Large\mathrm{\int_{-\infty}^{\infty}\frac{1}{x^{2}+1}dx=\textcolor{red}{\textbf\pi}}$");
 xstring(-0.9,0.1,"$\Large\mathrm{\int_{-1}^{1}\frac{1}{x^{2}+1}dx=\textcolor{red}{\textbf\frac{\pi}{2}}}$");
 title("$\huge\mathrm{y=\frac{8a^3}{x^2+4a^2}\textcolor{black}{\quad a=\sfrac{1}{2}\quad x\in[x_1,x_2]}}$","color","blue");
