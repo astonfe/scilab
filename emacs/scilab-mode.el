@@ -8,6 +8,7 @@
 ;; You can use it freely and at your own risk.
 
 ;; Define the classes of keywords
+;;{{{
 (setq scilab-primitives '(
 "getinstalledlookandfeels" "removeModulePreferences" "saveconsecutivecommands" "get_absolute_file_path"
 "addlocalizationdomain" "datatipSetOrientation" "fire_closing_finished" "xcosSimulationStarted"
@@ -309,7 +310,9 @@
 "cd" "lu" "or" "qr"
 "_"
 ))
+;;}}}
 
+;;{{{
 (setq scilab-commands '(
 "endfunction" "continue" "function" "apropos"
 "elseif" "resume" "return" "select"
@@ -320,7 +323,9 @@
 "pwd" "try" "who" "do"
 "if"
 ))
+;;}}}
 
+;;{{{
 (setq scilab-variables '(
 "differential_equationlib" "compatibility_functilib" "elementary_functionslib" "simulated_annealinglib"
 "genetic_algorithmslib" "development_toolslib" "signal_processinglib" "special_functionslib"
@@ -347,7 +352,9 @@
 "%i" "%s" "%T" "%t"
 "%z" "$"
 ))
+;;}}}
 
+;;{{{
 (setq scilab-functions '(
 "gencompilationflags_unix" "getTitleLabelPropertyNam" "neldermead_defaultoutput" "optimbase_hasconstraints"
 "optimbase_isinnonlincons" "tbx_build_gateway_loader" "tbx_builder_gateway_lang" "xcosValidateCompareBlock"
@@ -966,12 +973,15 @@
 "sva" "tic" "toc" "ver"
 "%k" "ls"
 ))
+;;}}}
 
+;;{{{
 (setq scilab-xcosfuns '(
 "with_modelica_compiler" "block_parameter_error" "initial_scicos_tables" "scicos_workspace_init"
 "find_scicos_version" "get_scicos_version" "scicos_getvalue" "scicos_simulate"
 "returntoscilab" "fixedpointgcd" "steadycos" "lincos"
 ))
+;;}}}
 
 ;; Create the regex string for each class of keywords
 (setq scilab-xcosfuns-regexp   (regexp-opt scilab-xcosfuns   'words))
