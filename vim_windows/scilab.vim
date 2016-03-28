@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language   : Scilab
 " Maintainer : Astonfe
-" Last change: 2015-03-21
+" Last change: 2016-03-02
 " Thanks to  : Vaclav Mocek, Patricio Toledo
 " Updated to Scilab 5.5.1 and GUI Builder, IPT3, JSON, NaN, Quapro toolboxes.
 " This software is totally free and comes to you without any warranty.
@@ -1013,11 +1013,21 @@ setlocal iskeyword+=!-!
 setlocal iskeyword+=$-$
 setlocal iskeyword+=%-%
 
+" | Keywords                     | Color            | RGB         | HEX     |
+" |------------------------------+------------------+-------------+---------|
+" | Primitives     (Operator)    | Medium blue      |   0,  0,205 | #0000CD |
+" | Commands       (Conditional) | Crimson          | 220, 20, 60 | #DC143C |
+" | Variables      (Statement)   | Dark orange      | 255,140,  0 | #FF8C00 |
+" | Functions      (Function)    | Dodger blue      |  30,144,255 | #1E90FF |
+" | Xcos functions (Label)       | Purple           | 128,  0,128 | #800080 |
+" | String         (String)      | Gray             | 128,128,128 | #808080 |
+" | Comment        (Comment)     | Medium sea green |  60,179,113 | #3CB371 |
+
 hi Operator    guifg=#0000CD
 hi Conditional guifg=#DC143C
 hi Statement   guifg=#FF8C00
 hi Function    guifg=#1E90FF
-hi Label       guifg=#D2B48C
+hi Label       guifg=#800080
 hi String      guifg=#808080
 hi Comment     guifg=#3CB371
 
